@@ -25,7 +25,7 @@ fun masterCardFee(mounthSum: Int, currentSum: Int): Int { // Возвращае�
 fun transferFee(card: String = "Мир", monthSum: Int, currentSum: Int): Int { /* Проверяет месячный и дневной
                                                                                 лимиты и блокирует операцию
                                                                                 либо возвращает сумму комиссии */
-    if (currentSum > 150_000 || monthSum > 600_000 || currentSum + monthSum > 600_000) {
+    if (currentSum > 150_000 || currentSum + monthSum > 600_000) {
         print("Операция заблокирована, комиссия = ")
         return 0
     }
